@@ -1,0 +1,41 @@
+package operator;
+import java.util.Scanner;
+interface calculator {
+    void add(double a,double b);
+    void sub(double a,double b);
+    void mul(double a,double b);
+    void div(double a,double b);
+}
+class arithmetic implements calculator{
+    public  void add(double a,double b)
+    {
+        System.out.println("Addition : "+(a+b));
+    }
+    public void sub(double a,double b)
+    {
+        System.out.println("Subtraction: "+(a-b));
+    }
+    public void mul(double a,double b)
+    {
+        System.out.println("Multiply: "+(a*b));
+    }
+    public void div(double a,double b)
+    {
+        System.out.println("Division: "+(a/b));
+    }
+}
+public class operator{
+    public static void main(String[] args){
+        Scanner sc=new Scanner (System.in);
+        System.out.print("Enter first no:");
+        Double num1=sc.nextDouble();
+        System.out.print("Enter Second no :");
+        Double num2=sc.nextDouble();
+        arithmetic ar= new arithmetic();
+        ar.add(num1,num2);
+        ar.sub(num1,num2);
+        ar.mul(num1,num2);
+        ar.div(num1,num2);
+        sc.close(); 
+    }
+}
